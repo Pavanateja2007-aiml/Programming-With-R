@@ -1,8 +1,8 @@
 # 🚀 R Machine Learning Projects Suite
 
-A comprehensive collection of **5 advanced machine learning projects** implemented in R, showcasing end-to-end implementations from data preprocessing to model evaluation with publication-quality visualizations.
+A comprehensive collection of **5 advanced machine learning projects** implemented in R, showcasing end-to-end implementations from data preprocessing to model evaluation with detailed visualizations and reports.
 
-> **Status:** ✅ All projects complete and production-ready | **Language:** R 4.0+ | **Datasets:** Real-world datasets included
+> **Status:** ✅ All projects complete and validated | **Language:** R 4.0+ | **Includes:** Datasets, Scripts, Reports & Visualizations
 
 ---
 
@@ -13,7 +13,6 @@ A comprehensive collection of **5 advanced machine learning projects** implement
 - [Repository Structure](#-repository-structure)
 - [Installation & Setup](#️-installation--setup)
 - [Project Descriptions](#-project-descriptions)
-- [Key Technologies](#-key-technologies--concepts)
 - [Usage Instructions](#-usage-instructions)
 - [Project Highlights](#-project-highlights)
 - [Troubleshooting](#-troubleshooting--common-issues)
@@ -35,24 +34,24 @@ packages <- c("caret", "ggplot2", "dplyr", "tidyr", "e1071", "class",
               "randomForest", "pROC", "Matrix", "recosystem", "cluster")
 install.packages(packages)
 
-# 3. Run the most impressive project (Breast Cancer Classification)
-setwd("Project-5")
-source("breast_cancer_classification.R")
+# 3. Run your first project (Email Spam Classification)
+setwd("Project-1")
+source("naive_bayes_spam.R")
 
-# 4. View results in the Plots pane
+# 4. View results and plots
 ```
 
 ---
 
 ## 🎯 Projects Overview
 
-| # | Project | Algorithm | Type | Best Accuracy | Key Focus |
-|---|---------|-----------|------|---------------|-----------|
-| 1️⃣ | Email Spam Classification | Naive Bayes | Binary Classification | TBD | Text Processing, NLP |
-| 2️⃣ | House Prices Analysis | K-Means + Linear Regression | Unsupervised + Supervised | R² Comparison | EDA, Clustering |
-| 3️⃣ | Heart Disease Prediction | Random Forest, k-NN, Log. Reg | Multi-model Comparison | AUC = 0.91 | Model Benchmarking |
-| 4️⃣ | Movie Recommendations | SVD Collaborative Filtering | Matrix Factorization | N/A | Recommendation Systems |
-| 5️⃣ | Breast Cancer Classification | Random Forest | Binary Classification | **96.35%** ⭐ | Production-Ready |
+| # | Project | Algorithm | Type | Dataset | Report |
+|---|---------|-----------|------|---------|--------|
+| 1️⃣ | Email Spam Classification | Naive Bayes | Binary Classification | emails.csv | ✅ DOCX |
+| 2️⃣ | House Prices ML | K-Means + Linear Regression | Clustering + Regression | house_prices.csv | ✅ DOCX |
+| 3️⃣ | Titanic Survival Prediction | ML Algorithms | Binary Classification | Titanic Dataset | ✅ DOCX |
+| 4️⃣ | Movie Recommendations | SVD Collaborative Filtering | Matrix Factorization | MovieLens | ✅ DOCX |
+| 5️⃣ | Breast Cancer Classification | Random Forest | Binary Classification | Cancer Data | ✅ DOCX |
 
 ---
 
@@ -60,32 +59,64 @@ source("breast_cancer_classification.R")
 
 ```
 Programming-With-R/
-├── README.md                          # This file
 │
-├── Project-1/                         # Email Spam Classification
-│   ├── email_spam_classification.R
-│   ├── emails.csv
-│   └── README.md
+├── README.md                                    # Main documentation
 │
-├── Project-2/                         # House Prices Analysis
-│   ├── house_prices_analysis.R
-│   ├── house_prices.csv
-│   └── README.md
+├── Project-1: Email Spam Classification
+│   ├── naive_bayes_spam.R                      # Main script
+│   ├── emails.csv                               # Dataset
+│   ├── Email_Spam_Classification_Naive_Bayes_Report.docx
+│   └── plots/
+│       ├── plot_01_class_distribution_bar.png
+│       ├── plot_02_class_distribution_pie.png
+│       ├── plot_03_text_length_distribution.png
+│       ├── plot_04_word_frequency.png
+│       ├── plot_05_boxplot_text_length.png
+│       ├── plot_06_confusion_matrix.png
+│       ├── plot_07_performance_metrics.png
+│       ├── plot_08_actual_vs_predicted.png
+│       └── plot_09_train_test_split.png
 │
-├── Project-3/                         # Heart Disease Prediction
-│   ├── heart_disease_prediction.R
-│   ├── heart_disease_data.csv
-│   └── README.md
+├── Project-2: House Prices ML
+│   ├── house_prices_ml.R                       # Main script
+│   ├── house_prices.csv                         # Dataset
+│   ├── HousePrices_ML_ProjectReport.docx
+│   └── plots/ (20 visualizations)
+│       ├── plot_01_price_distribution.png
+│       ├── plot_02_area_vs_price.png
+│       ├── plot_03_price_by_bedrooms.png
+│       ├── plot_04_garage_garden_price.png
+│       ├── plot_05_correlation_heatmap.png
+│       ├── plot_06_pairplot.png
+│       ├── plot_07_age_vs_price.png
+│       ├── plot_08_distance_vs_price.png
+│       ├── plot_09_floors_pie.png
+│       ├── plot_10_elbow_method.png
+│       ├── plot_11_silhouette_scores.png
+│       ├── plot_12_cluster_pca.png
+│       ├── plot_13_cluster_area_price.png
+│       ├── plot_14_cluster_price_box.png
+│       ├── plot_15_cluster_radar.png
+│       ├── plot_16_actual_vs_predicted.png
+│       ├── plot_17_residuals_distribution.png
+│       ├── plot_18_residuals_vs_fitted.png
+│       ├── plot_19_feature_importance.png
+│       └── plot_20_regression_metrics.png
 │
-├── Project-4/                         # Movie Recommendations
-│   ├── movie_recommendations.R
-│   ├── movielens_100k/                # MovieLens dataset
-│   └── README.md
+├── Project-3: Titanic Survival Prediction
+│   ├── Titanic Survival Prediction.R            # Main script
+│   ├── Titanic_Survival_Prediction_Report.docx
+│   └── plots/ (Multiple visualizations)
 │
-└── Project-5/                         # Breast Cancer Classification
-    ├── breast_cancer_classification.R
-    ├── breast_cancer.csv
-    └── README.md
+├── Project-4: Movie Recommendation System
+│   ├── Movie Recommendation System.R            # Main script
+│   ├── Movie Recommendation System using Collaborative Filtering with SVD.docx
+│   └── plots/ (Visualizations)
+│
+└── Project-5: Breast Cancer Classification
+    ├── Breast Cancer Classification.R           # Main script
+    ├── Breast_Cancer_Classification_Report.docx
+    └── plots/ (Visualizations)
 ```
 
 ---
@@ -95,7 +126,7 @@ Programming-With-R/
 ### Prerequisites
 
 - **R** version 4.0 or higher ([Download](https://www.r-project.org/))
-- **RStudio** (Optional but Recommended) ([Download](https://posit.co/download/rstudio-desktop/))
+- **RStudio** (Recommended) ([Download](https://posit.co/download/rstudio-desktop/))
 - **Git** for cloning the repository
 
 ### Step-by-Step Installation
@@ -112,8 +143,8 @@ cd Programming-With-R
 Run this in your R console:
 
 ```r
-# Core packages for all projects
-core_packages <- c(
+# Install all required packages
+packages <- c(
   "caret",        # ML pipeline & model training
   "ggplot2",      # Advanced visualization
   "dplyr",        # Data manipulation
@@ -127,20 +158,14 @@ core_packages <- c(
   "cluster"       # Clustering algorithms
 )
 
-install.packages(core_packages)
+install.packages(packages)
 ```
 
 #### Step 3: Verify Installation
 
 ```r
-# Quick test to ensure packages load correctly
-sapply(core_packages, require, character.only = TRUE)
-```
-
-#### Step 4: Set Working Directory (in RStudio)
-
-```r
-setwd("~/Programming-With-R")  # Adjust path as needed
+# Test all packages load correctly
+sapply(packages, require, character.only = TRUE)
 ```
 
 ---
@@ -149,135 +174,148 @@ setwd("~/Programming-With-R")  # Adjust path as needed
 
 ### **Project-1: Email Spam Classification Using Naive Bayes**
 
-**Objective:** Develop an automated binary text classifier to distinguish spam from legitimate emails using probability theory.
+**Objective:** Build a text classification system to automatically detect spam emails using the Naive Bayes probabilistic algorithm.
 
-**What You'll Learn:**
-- Text preprocessing pipeline (tokenization, lowercasing, punctuation removal)
-- Feature extraction with TF-IDF vectorization
-- Naive Bayes probabilistic classification
-- Performance evaluation with confusion matrices
+**Key Features:**
+- Binary text classification (Spam vs Ham)
+- Text preprocessing and feature engineering
+- TF-IDF vectorization
+- Naive Bayes classifier implementation
+- Comprehensive performance evaluation
 
-**Dataset:** Email corpus with labeled spam/ham messages
+**Dataset:** emails.csv
+- Contains email text and labels
+- Balanced spam/ham distribution
+
+**Visualizations (9 plots):**
+- Class distribution (bar & pie charts)
+- Text length analysis (distribution & boxplot)
+- Word frequency analysis
+- Confusion matrix visualization
+- Performance metrics comparison
+- Train/test split visualization
 
 **Technologies Used:**
 ```r
 library(e1071)      # Naive Bayes
 library(tm)         # Text mining
 library(caret)      # Model evaluation
+library(ggplot2)    # Visualizations
 ```
-
-**Key Outputs:**
-- Confusion matrix with accuracy, precision, recall, F1-score
-- TF-IDF feature rankings
-- Model insights and misclassification analysis
 
 **Run the Project:**
 ```r
 setwd("Project-1")
-source("email_spam_classification.R")
+source("naive_bayes_spam.R")
 ```
+
+**Output:** Detailed report in `Email_Spam_Classification_Naive_Bayes_Report.docx`
 
 ---
 
 ### **Project-2: House Prices ML Project**
 
-**Objective:** Discover market segments in real estate and predict house prices using clustering & regression.
+**Objective:** Analyze real estate market data using clustering and regression to identify property segments and predict prices.
 
-**What You'll Learn:**
-- Exploratory Data Analysis (EDA) with ggplot2
-- K-Means clustering for unsupervised market segmentation
-- Elbow method for optimal cluster selection
+**Key Features:**
+- Exploratory Data Analysis (EDA) with 20 visualizations
+- K-Means clustering for market segmentation
+- Elbow method & silhouette analysis
 - Multiple linear regression for price prediction
-- Feature importance identification
+- Feature importance ranking
+- Residual analysis and model diagnostics
 
-**Dataset:** 500 residential properties with 8 features:
-- Area, Bedrooms, Bathrooms, Age, Garage, Floors, Garden, Distance to center
+**Dataset:** house_prices.csv
+- 500 residential properties
+- 8 features: Area, Bedrooms, Bathrooms, Age, Garage, Floors, Garden, Distance
+- Target: House Price
 
-**Key Highlights:**
-- 20+ professional ggplot2 visualizations
-- Natural market tiers discovered through clustering
-- Feature ranking by importance
-- R² and MSE evaluation metrics
+**Visualizations (20 plots):**
+- Price distribution analysis
+- Feature relationships (area, bedrooms, bathrooms, etc.)
+- Correlation heatmap
+- Pairplot matrix
+- Elbow method curve
+- Silhouette scores
+- PCA cluster visualization
+- Cluster analysis (area, price, radar charts)
+- Regression predictions vs actual
+- Residuals distribution & diagnostics
+- Feature importance ranking
+- Regression performance metrics
 
 **Technologies Used:**
 ```r
-library(ggplot2)    # Publication-quality plots
+library(ggplot2)    # Visualizations
 library(dplyr)      # Data manipulation
+library(caret)      # Model training
 library(cluster)    # K-Means clustering
 ```
 
 **Run the Project:**
 ```r
 setwd("Project-2")
-source("house_prices_analysis.R")
+source("house_prices_ml.R")
 ```
+
+**Output:** Detailed report in `HousePrices_ML_ProjectReport.docx`
 
 ---
 
-### **Project-3: Heart Disease Prediction**
+### **Project-3: Titanic Survival Prediction**
 
-**Objective:** Compare multiple machine learning algorithms to predict cardiac risk with clinical accuracy.
+**Objective:** Predict passenger survival on the Titanic using machine learning algorithms and passenger characteristics.
 
-**What You'll Learn:**
-- Multi-model comparison: Logistic Regression vs k-NN vs Random Forest
-- 5-fold cross-validation for robust evaluation
-- ROC-AUC curve analysis
-- Feature importance in medical contexts
-- PCA visualization of decision boundaries
+**Key Features:**
+- Classification problem on historical data
+- Multiple algorithm implementations
+- Feature engineering from passenger data
+- Model evaluation and comparison
+- Visualization of predictions and patterns
 
-**Dataset:** UCI Heart Disease Dataset
-- 303 patients with 13 clinical features
-- Binary outcome: Disease present/absent
+**Dataset:** Titanic Survival Dataset
+- Historical passenger data from the Titanic
+- Features: Age, Sex, Class, Fare, Family size, etc.
+- Target: Survived (Yes/No)
 
-**Best Model Performance:**
-```
-Algorithm: Random Forest
-AUC Score: 0.91 (excellent discrimination)
-Top Feature: Maximum heart rate (thalach)
-CV Mean: 0.908 ± 0.032
-```
+**Algorithms Used:**
+- Binary classification techniques
+- Model performance comparison
+- Cross-validation evaluation
 
 **Technologies Used:**
 ```r
-library(caret)      # Model training pipeline
-library(pROC)       # ROC curves
-library(randomForest) # Ensemble learning
+library(caret)      # Model training & validation
+library(ggplot2)    # Visualizations
+library(dplyr)      # Data manipulation
 ```
 
 **Run the Project:**
 ```r
 setwd("Project-3")
-source("heart_disease_prediction.R")
+source("Titanic Survival Prediction.R")
 ```
+
+**Output:** Detailed report in `Titanic_Survival_Prediction_Report.docx`
 
 ---
 
-### **Project-4: Movie Recommendation System**
+### **Project-4: Movie Recommendation System Using Collaborative Filtering**
 
-**Objective:** Build a personalized recommendation engine using Singular Value Decomposition (SVD).
+**Objective:** Build a personalized movie recommendation engine using Singular Value Decomposition (SVD) matrix factorization.
 
-**What You'll Learn:**
-- User-item matrix construction
-- Matrix factorization with SVD
-- Latent factor interpretation
-- Cold-start problem handling
-- Recommendation ranking and evaluation
+**Key Features:**
+- Collaborative filtering approach
+- SVD matrix factorization
+- User-item rating matrix construction
+- Personalized recommendations
+- Latent factor analysis
+- Rating prediction system
 
-**Dataset:** MovieLens 100K Dataset
-- 100,000 ratings from 943 users
-- 1,682 movies (wide selection)
-- Rating scale: 1-5 stars
-
-**Approach:**
-1. Build sparse rating matrix (users × movies)
-2. Apply SVD with 50 latent factors
-3. Impute missing ratings (global mean strategy)
-4. Generate top-5 recommendations per user
-
-**Key Advantages:**
-- Scalable to millions of users
-- Captures implicit patterns
-- Handles sparse data effectively
+**Dataset:** MovieLens Data
+- User ratings for various movies
+- Sparse rating matrix (users × movies)
+- Historical preference data
 
 **Technologies Used:**
 ```r
@@ -286,97 +324,87 @@ library(Matrix)     # Sparse matrices
 library(dplyr)      # Data manipulation
 ```
 
+**Key Highlights:**
+- Recommends unwatched movies to users
+- Handles sparse data effectively
+- Interpretable latent factors
+- Scalable matrix factorization
+
 **Run the Project:**
 ```r
 setwd("Project-4")
-source("movie_recommendations.R")
+source("Movie Recommendation System.R")
 ```
+
+**Output:** Detailed report in `Movie Recommendation System using Collaborative Filtering with SVD.docx`
 
 ---
 
-### **Project-5: Breast Cancer Classification** ⭐
+### **Project-5: Breast Cancer Classification**
 
-**Objective:** Develop a high-accuracy diagnostic system for tumor classification using Random Forest.
+**Objective:** Develop a diagnostic classification system to predict breast tumor malignancy using Random Forest.
 
-**What You'll Learn:**
-- Binary classification with ensemble methods
+**Key Features:**
+- Binary classification (Benign vs Malignant)
+- Random Forest ensemble learning
 - Cross-validation for robustness
-- Feature importance for medical interpretation
-- Handling imbalanced datasets
-- Clinical decision support systems
+- High accuracy predictions
+- Feature importance biomarker identification
+- Medical decision support system
 
-**Dataset:** Wisconsin Breast Cancer Database
-- 683 patients (after cleaning)
-- 9 morphological features
-- Imbalanced: 65% benign, 35% malignant
+**Dataset:** Breast Cancer Dataset
+- Morphological features of tumors
+- Binary outcome (Benign/Malignant)
+- Real medical data
 
-**Outstanding Performance:**
-```
-Metric          Value
-─────────────────────────
-Test Accuracy   96.35%
-ROC AUC         0.99 ⭐
-Sensitivity     96% (catches malignancy)
-Specificity     98% (avoids false alarms)
-```
-
-**Top Predictive Features:**
-1. Bare Nuclei (85.2 importance)
-2. Cell Size (76.5 importance)
-3. Cell Shape (74.1 importance)
-
-**Real-World Applicability:**
-- High sensitivity catches 96% of cancers
-- High specificity reduces unnecessary interventions
-- ROC AUC of 0.99 shows excellent model calibration
+**Performance Metrics:**
+- High accuracy classification
+- ROC-AUC analysis
+- Feature importance ranking
+- Cross-validation results
 
 **Technologies Used:**
 ```r
-library(randomForest) # Random Forest
-library(caret)        # Cross-validation
-library(pROC)         # ROC analysis
+library(randomForest) # Ensemble learning
+library(caret)        # Model training & CV
+library(pROC)         # ROC curves
+library(ggplot2)      # Visualizations
 ```
 
 **Run the Project:**
 ```r
 setwd("Project-5")
-source("breast_cancer_classification.R")
+source("Breast Cancer Classification.R")
 ```
+
+**Output:** Detailed report in `Breast_Cancer_Classification_Report.docx`
 
 ---
 
-## 🔑 Key Technologies & Concepts
+## 🔑 Key Technologies & Libraries
 
-### Machine Learning Algorithms
+### Core Packages
 
-| Algorithm | Type | Use Case | Project |
-|-----------|------|----------|---------|
-| Naive Bayes | Probabilistic Classifier | Text classification | Project-1 |
-| K-Means | Unsupervised Clustering | Market segmentation | Project-2 |
-| Linear Regression | Supervised Regression | Price prediction | Project-2 |
-| Logistic Regression | Linear Classifier | Binary classification | Project-3 |
-| k-Nearest Neighbors | Instance-Based Learning | Pattern matching | Project-3 |
-| Random Forest | Ensemble Learning | High-accuracy classification | Project-3, 5 |
-| SVD | Matrix Factorization | Recommendations | Project-4 |
+| Package | Purpose | Used In |
+|---------|---------|---------|
+| `caret` | ML pipeline & model training | All projects |
+| `ggplot2` | Publication-quality visualizations | All projects |
+| `dplyr` | Data manipulation | All projects |
+| `tidyr` | Data tidying | Projects 1, 2, 3 |
+| `e1071` | Naive Bayes & SVM | Project 1 |
+| `class` | k-NN algorithm | Project 3 |
+| `randomForest` | Ensemble learning | Projects 3, 5 |
+| `pROC` | ROC curves & AUC | Projects 3, 5 |
+| `Matrix` | Sparse matrices | Project 4 |
+| `recosystem` | Collaborative filtering | Project 4 |
+| `cluster` | Clustering algorithms | Project 2 |
 
-### Evaluation Metrics
+### Installation
 
-- **Classification:** Accuracy, Precision, Recall, F1-Score, Confusion Matrix
-- **Ranking:** ROC-AUC, Sensitivity, Specificity
-- **Regression:** R², MSE, MAE
-- **Validation:** k-Fold Cross-Validation (typically k=5)
-
-### Data Science Workflow (All Projects Follow)
-
-```
-1. Data Loading & Inspection
-2. Exploratory Data Analysis (EDA)
-3. Data Cleaning & Preprocessing
-4. Feature Engineering & Selection
-5. Model Training & Hyperparameter Tuning
-6. Model Evaluation & Validation
-7. Results Interpretation & Visualization
-8. Documentation & Reporting
+```r
+packages <- c("caret", "ggplot2", "dplyr", "tidyr", "e1071", "class",
+              "randomForest", "pROC", "Matrix", "recosystem", "cluster")
+install.packages(packages)
 ```
 
 ---
@@ -387,37 +415,48 @@ source("breast_cancer_classification.R")
 
 #### Option 1: Using setwd() + source()
 ```r
-# Example: Run Project-5
-setwd("~/Programming-With-R/Project-5")
-source("breast_cancer_classification.R")
+setwd("~/Programming-With-R/Project-1")
+source("naive_bayes_spam.R")
 ```
 
-#### Option 2: Full Path (No Directory Change)
+#### Option 2: Full Path
 ```r
-# Run from any directory
-source("~/Programming-With-R/Project-5/breast_cancer_classification.R")
+source("~/Programming-With-R/Project-1/naive_bayes_spam.R")
 ```
 
-#### Option 3: RStudio Project
-1. Open `Programming-With-R` as an RStudio Project
+#### Option 3: RStudio
+1. Open Programming-With-R as RStudio Project
 2. Navigate to Project-X folder in Files pane
-3. Open the .R file and press Ctrl+Shift+S (or Cmd+Shift+S)
+3. Open the .R file
+4. Press Ctrl+Shift+S (or Cmd+Shift+S on Mac)
+
+### Viewing Results
+
+After running a project:
+
+1. **Plots** - View in the Plots pane (RStudio)
+2. **Console Output** - Check for model performance metrics
+3. **Reports** - Open the .docx files for detailed analysis
+4. **Generated Plots** - PNG files saved in project directories
 
 ### Common Commands
 
 ```r
-# View available datasets
-dir("Project-1")
+# Set working directory
+setwd("path/to/Project-X")
 
-# Load data manually
-data <- read.csv("Project-1/emails.csv")
+# View available files
+list.files()
 
-# Inspect data structure
+# Load dataset
+data <- read.csv("filename.csv")
+
+# Explore data
 str(data)
 head(data)
 summary(data)
 
-# Check for missing values
+# Check missing values
 colSums(is.na(data))
 ```
 
@@ -425,39 +464,25 @@ colSums(is.na(data))
 
 ## ✨ Project Highlights
 
-### Techniques Demonstrated
+### Data Visualization
+- 📊 20+ ggplot2 visualizations in Project-2
+- 📈 Correlation heatmaps and pairplots
+- 🎯 Confusion matrices and performance metrics
+- 📉 Residual plots and diagnostics
 
-✅ **Text Processing & NLP**
-- Tokenization and stemming
-- TF-IDF vectorization
-- Stopword removal
+### Machine Learning Techniques
+- ✅ Supervised Learning (Classification & Regression)
+- ✅ Unsupervised Learning (Clustering)
+- ✅ Ensemble Methods (Random Forest)
+- ✅ Text Processing (NLP)
+- ✅ Matrix Factorization (SVD)
+- ✅ Model Evaluation & Validation
 
-✅ **Unsupervised Learning**
-- K-Means clustering
-- Elbow method
-- Silhouette analysis
-
-✅ **Supervised Learning**
-- Regression (linear, logistic)
-- Classification (binary & multi-class)
-- Ensemble methods (Random Forest)
-
-✅ **Advanced Methods**
-- SVD matrix factorization
-- PCA visualization
-- Collaborative filtering
-
-✅ **Evaluation & Validation**
-- k-Fold cross-validation
-- ROC-AUC analysis
-- Confusion matrices
-- Feature importance ranking
-
-✅ **Visualization**
-- ggplot2 for publication-quality graphics
-- ROC curves, feature importance plots
-- Clustering visualizations
-- Diagnostic plots
+### Comprehensive Reports
+- 📄 Detailed .docx reports for each project
+- 📊 Professional visualizations
+- 📋 Results and interpretations
+- 🎓 Learning insights
 
 ---
 
@@ -465,86 +490,90 @@ colSums(is.na(data))
 
 ### Issue: Package Installation Fails
 
-**Problem:** `Error in install.packages() : unable to install packages`
-
 **Solution:**
 ```r
 # Try with dependencies
 install.packages("caret", dependencies = TRUE)
 
-# Or use CRAN mirror
+# Or specify CRAN mirror
 options(repos = c(CRAN = "https://cloud.r-project.org"))
 install.packages("caret")
 ```
 
 ### Issue: File Not Found Error
 
-**Problem:** `Error: cannot open file 'emails.csv': No such file or directory`
-
 **Solution:**
 ```r
-# Check current working directory
+# Check working directory
 getwd()
 
-# List files to verify data exists
+# List files to verify
 list.files()
 
-# Set correct working directory
+# Set correct path
 setwd("~/Programming-With-R/Project-1")
 ```
 
-### Issue: Memory Error with Large Datasets
-
-**Problem:** Large dataset causes out-of-memory error
+### Issue: Memory or Performance Problems
 
 **Solution:**
 ```r
-# Increase memory limit (Windows)
-memory.limit(size = 8000)  # 8GB
-
-# Or sample the data
+# Sample data for testing
 set.seed(123)
-sampled_data <- data[sample(nrow(data), size = 10000), ]
+sample_data <- data[sample(nrow(data), size = 1000), ]
+
+# Or increase memory (Windows)
+memory.limit(size = 8000)
 ```
 
-### Issue: Random Results Vary
-
-**Problem:** Model results change between runs
+### Issue: Inconsistent Results
 
 **Solution:**
 ```r
-# Set random seed for reproducibility
+# Set seed for reproducibility
 set.seed(123)
 
-# Then run your model
-# Results will be consistent across runs
+# Then run your analysis
+# Results will be consistent
 ```
 
-### Issue: Package Conflicts
-
-**Problem:** `Error: could not find function "..."` despite installing package
+### Issue: Package Loading Error
 
 **Solution:**
 ```r
-# Explicitly load the library
+# Explicitly load library
 library(caret)
-library(randomForest)
 
-# Check if package is loaded
-search()  # View all loaded packages
+# Check loaded packages
+search()
+
+# Reinstall if needed
+remove.packages("caret")
+install.packages("caret")
+library(caret)
 ```
 
 ---
 
-## 📈 Performance Summary
+## 📖 How to Use This Repository
 
-| Project | Algorithm | Metric | Value |
-|---------|-----------|--------|-------|
-| 1 | Naive Bayes | Accuracy | Detailed report |
-| 2 | Linear Regression | R² | Comparison provided |
-| 3 | Random Forest | AUC | 0.91 (5-fold CV) |
-| 4 | SVD | RMSE | Recommendation accuracy |
-| 5 | Random Forest | Accuracy | **96.35%** ⭐ |
+1. **For Learning:** Work through projects sequentially (1→5) to build ML expertise
+2. **For Reference:** Refer to specific project implementations for algorithm patterns
+3. **For Practice:** Adapt code to your own datasets
+4. **For Production:** Use as templates for real-world applications
+5. **For Collaboration:** Fork, modify, and contribute improvements
+
+---
+
+## 📚 Learning Path
+
+**Beginner → Intermediate → Advanced**
+
+1. **Start with:** Project-1 (Email Spam) - Simple, text-based
+2. **Progress to:** Project-2 (House Prices) - EDA & Clustering
+3. **Learn Comparison:** Project-3 (Titanic) - Multiple algorithms
+4. **Advanced:** Project-4 (Recommendations) - Matrix factorization
+5. **Clinical ML:** Project-5 (Cancer) - High-stakes classification
 
 ---
 
@@ -552,39 +581,18 @@ search()  # View all loaded packages
 
 ### How to Contribute
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/improvement`)
-3. **Commit** your changes (`git commit -am 'Add improvement'`)
-4. **Push** to the branch (`git push origin feature/improvement`)
-5. **Open** a Pull Request with description
-
-### Ideas for Contribution
-
-- Add more datasets for existing projects
-- Implement additional algorithms
-- Improve visualizations
-- Add performance benchmarks
-- Extend documentation
-- Fix bugs or issues
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit changes (`git commit -am 'Add improvement'`)
+4. Push branch (`git push origin feature/improvement`)
+5. Open a Pull Request
 
 ### Getting Help
 
 - 📋 Open an issue for bugs or questions
 - 💬 Discuss improvements in Pull Requests
-- 📧 Contact project maintainer
-- 📚 Check individual Project-X/README.md for project-specific details
-
----
-
-## 📖 Learning Path
-
-**Beginner → Intermediate → Advanced**
-
-1. **Start with:** Project-5 (Breast Cancer) - Clean data, excellent results
-2. **Then explore:** Project-2 (House Prices) - EDA and visualization skills
-3. **Progress to:** Project-3 (Heart Disease) - Model comparison
-4. **Challenge yourself:** Project-4 (Recommendations) - Advanced techniques
-5. **Master NLP:** Project-1 (Spam) - Text processing
+- 📧 Contact repository maintainer
+- 📚 Check project-specific reports
 
 ---
 
@@ -606,24 +614,24 @@ This project suite is provided as-is for **educational and professional purposes
 
 ## 🙏 Acknowledgments
 
-- Datasets sourced from UCI ML Repository, MovieLens, Kaggle
-- Algorithms implemented using established R packages and best practices
-- Inspired by real-world applications in healthcare, finance, and e-commerce
-- Community feedback and contributions
+- Datasets sourced from UCI ML Repository, Kaggle, MovieLens
+- Algorithms implemented using established R packages
+- Inspired by real-world ML applications
+- Community contributions and feedback
 
 ---
 
 ## 📚 Additional Resources
 
 ### R & Machine Learning
-- [R for Data Science](https://r4ds.had.co.nz/) - Hadley Wickham
-- [CRAN Task Views - Machine Learning](https://cran.r-project.org/web/views/MachineLearning.html)
+- [R for Data Science](https://r4ds.had.co.nz/)
+- [CRAN Machine Learning Task View](https://cran.r-project.org/web/views/MachineLearning.html)
 - [caret Package Documentation](http://topepo.github.io/caret/)
 
 ### Datasets
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
 - [Kaggle Datasets](https://www.kaggle.com/datasets)
-- [MovieLens](https://movielens.org/)
+- [MovieLens Data](https://movielens.org/)
 
 ### Visualization
 - [ggplot2 Documentation](https://ggplot2.tidyverse.org/)
@@ -634,30 +642,38 @@ This project suite is provided as-is for **educational and professional purposes
 ## ⭐ Quick Links
 
 - 🔗 [GitHub Repository](https://github.com/Pavanateja2007-aiml/Programming-With-R)
-- 📧 [Contact & Issues](https://github.com/Pavanateja2007-aiml/Programming-With-R/issues)
-- 💡 [Project Ideas](https://github.com/Pavanateja2007-aiml/Programming-With-R/discussions)
+- 📧 [Issues & Discussions](https://github.com/Pavanateja2007-aiml/Programming-With-R/issues)
+- 💡 [Contribute](https://github.com/Pavanateja2007-aiml/Programming-With-R/pulls)
+
+---
+
+## 🎯 Quick Start Summary
+
+```bash
+# 1. Clone
+git clone https://github.com/Pavanateja2007-aiml/Programming-With-R.git
+cd Programming-With-R
+
+# 2. Install packages (in R)
+packages <- c("caret", "ggplot2", "dplyr", "tidyr", "e1071", "class",
+              "randomForest", "pROC", "Matrix", "recosystem", "cluster")
+install.packages(packages)
+
+# 3. Run a project (in R)
+setwd("Project-1")
+source("naive_bayes_spam.R")
+
+# 4. View results in Plots pane or open .docx reports
+```
 
 ---
 
 **Last Updated:** June 2026  
 **Status:** ✅ All projects complete and validated  
-**Total Projects:** 5️⃣ | **Algorithms:** 7️⃣ | **Performance Highlights:** AUC 0.91, Accuracy 96.35% ⭐
+**Total Projects:** 5️⃣ | **Algorithms:** Multiple ML algorithms | **Visualizations:** 50+ plots  
 
 ---
 
-## 🎯 Call to Action
-
-**Ready to get started?**
-
-```r
-# Copy-paste this to start learning!
-git clone https://github.com/Pavanateja2007-aiml/Programming-With-R.git
-cd Programming-With-R
-# Follow the Quick Start section above ⬆️
-```
-
-**Happy Machine Learning! 🚀📊**
-
----
+**Happy Machine Learning! 🚀**
 
 *Built with ❤️ using R, dedicated to advancing machine learning education and practical implementations.*
